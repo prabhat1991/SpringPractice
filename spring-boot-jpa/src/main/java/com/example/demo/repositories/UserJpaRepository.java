@@ -1,5 +1,7 @@
 package com.example.demo.repositories;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
@@ -21,6 +23,6 @@ public interface UserJpaRepository extends JpaRepository<Users, Long> {
 	 * @param name
 	 * @return
 	 */
-	Users findByName(String name);
+	List<Users> findByName(String name);
 
 }

@@ -26,12 +26,12 @@ public class UserController {
 	}
 	
 	@GetMapping("/{name}")
-	public Users findByName(@PathVariable final String name) {
+	public List<Users> findByName(@PathVariable final String name) {
 		return userJpaRepository.findByName(name);
 	}
 	
 	@PostMapping("/load")
-	public Users load(@RequestBody final Users users) {
+	public List<Users> load(@RequestBody final Users users) {
 		userJpaRepository.save(users);
 		return userJpaRepository.findByName(users.getName());
 	}
