@@ -14,7 +14,7 @@ import com.example.demo.models.Users;
  *
  */
 @Component
-public interface UserJpaRepository extends JpaRepository<Users, Long> {
+public interface UserJpaRepository extends JpaRepository<Users, Integer> {
 
 	/**
 	 * A custom method declaration
